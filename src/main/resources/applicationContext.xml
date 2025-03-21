@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="musicBean"
-          class="ru.sorokin.springcourse.ClassicalMusic">
+          class="ru.sorokin.springcourse.PopMusic">
     </bean>
     <bean id="musicPlayer"
           class="ru.sorokin.springcourse.MusicPlayer">
