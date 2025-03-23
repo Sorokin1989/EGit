@@ -9,12 +9,34 @@
 
     <context:property-placeholder location="musicPlayer.properties"/>
 
-    <bean id="musicBean"
+    <bean id="musicBean1"
           class="ru.sorokin.springcourse.RockMusic">
+
     </bean>
+
+    <bean id="musicBean2"
+          class="ru.sorokin.springcourse.ClassicalMusic">
+    </bean>
+
+    <bean id="musicBean3"
+          class="ru.sorokin.springcourse.PopMusic">
+    </bean>
+
+    <bean id="musicBean4"
+          class="ru.sorokin.springcourse.JazzMusic">
+
+    </bean>
+
     <bean id="musicPlayer"
           class="ru.sorokin.springcourse.MusicPlayer">
-        <property name="music" ref="musicBean"/>
+        <property name="musicList">
+            <list>
+                <ref bean="musicBean1"/>
+                <ref bean="musicBean2"/>
+                <ref bean="musicBean3"/>
+                <ref bean="musicBean4"/>
+            </list>
+        </property>
 
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
