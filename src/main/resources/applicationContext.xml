@@ -15,11 +15,12 @@
     </bean>
 
     <bean id="musicPlayer"
+          scope="prototype"
           class="ru.sorokin.springcourse.MusicPlayer">
+
 
         <property name="name" value="Some name"/>
         <property name="volume" value="70"/>
-
     </bean>
 
 </beans>
