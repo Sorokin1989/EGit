@@ -10,17 +10,19 @@
     <context:property-placeholder location="musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="ru.sorokin.springcourse.RockMusic">
+          class="ru.sorokin.springcourse.ClassicalMusic"
+    init-method="doMyInit"
+    destroy-method="doMyDestroy">
 
     </bean>
 
-    <bean id="musicPlayer"
-          scope="prototype"
-          class="ru.sorokin.springcourse.MusicPlayer">
 
 
-        <property name="name" value="Some name"/>
-        <property name="volume" value="70"/>
-    </bean>
+    <!--<bean id="musicPlayer"
+          //scope="prototype"
+          //class="ru.sorokin.springcourse.MusicPlayer">
+ //property name="name" value="Some name"/>
+ //property name="volume" value="70"/>
+ //bean>-->
 
 </beans>
