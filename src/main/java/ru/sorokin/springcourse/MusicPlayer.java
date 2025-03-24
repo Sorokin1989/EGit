@@ -3,23 +3,20 @@ package ru.sorokin.springcourse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
 @Component
 public class MusicPlayer {
-    private Music music;
 
-
-    public MusicPlayer(Music music) {
-     this.music=music;
-    }
+    private ClassicalMusic classicalMusic;
+    private JazzMusic jazzMusic;
 @Autowired
-    public void setMusic(Music music) {
-        this.music = music;
+    public MusicPlayer(ClassicalMusic classicalMusic, JazzMusic jazzMusic) {
+        this.classicalMusic = classicalMusic;
+        this.jazzMusic = jazzMusic;
     }
 
     public void playMusic() {
-         System.out.println("Playing: " + music.getSong());
+        System.out.println("Playing: " + classicalMusic.getSong());
+        System.out.println("Playing: " + jazzMusic.getSong());
 
     }
 }
