@@ -7,24 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="musicPlayer.properties"/>
+ <context:component-scan base-package="ru.sorokin.springcourse"/>
 
-    <bean id="musicBean"
-          class="ru.sorokin.springcourse.ClassicalMusic"
-          scope="prototype"
-    init-method="doMyInit"
-    destroy-method="doMyDestroy"
-    factory-method="getClassicalMusic">
-
-    </bean>
-
-
-
-    <!--<bean id="musicPlayer"
-          //scope="prototype"
-          //class="ru.sorokin.springcourse.MusicPlayer">
- //property name="name" value="Some name"/>
- //property name="volume" value="70"/>
- //bean>-->
 
 </beans>
