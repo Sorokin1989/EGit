@@ -11,6 +11,7 @@
 
     <bean id="musicBean"
           class="ru.sorokin.springcourse.ClassicalMusic"
+          scope="prototype"
     init-method="doMyInit"
     destroy-method="doMyDestroy"
     factory-method="getClassicalMusic">
