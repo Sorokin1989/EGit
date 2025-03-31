@@ -2,12 +2,25 @@ package ru.sorokin.springcourse;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ClassicalMusic implements Music {
+    private List<String> songs = new ArrayList<String>();
 
-    @Override
-    public String getSong() {
-        return "Hungarian Rhapsody";
+    {
+        songs.add("Hungarian Rhapsody");
+        songs.add("Symphony no. 5 in C Minor, op. 67");
+        songs.add("Night on Bald Mountain");
+    }
+
+
+
+   @Override
+    public List <String> getSongs() {
+        return songs;
+
     }
 }
 
