@@ -32,6 +32,27 @@
       <artifactId>spring-context</artifactId>
       <version>7.0.0-M1</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.jberet.test-apps/postConstruct -->
+    <!-- https://mvnrepository.com/artifact/org.jberet.test-apps/postConstruct -->
+    <dependency>
+      <groupId>org.jberet.test-apps</groupId>
+      <artifactId>postConstruct</artifactId>
+      <version>3.0.0.Beta1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.webjars.npm/destroy -->
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>destroy</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>SpringApp</finalName>
