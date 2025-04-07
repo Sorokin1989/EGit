@@ -15,7 +15,7 @@ public class MusicPlayer {
 
     private List<Music> musicList;
 
-    public MusicPlayer(List<Music> musicList) {
+    public MusicPlayer(List<Object> musicList) {
         this.musicList = musicList;
     }
 
