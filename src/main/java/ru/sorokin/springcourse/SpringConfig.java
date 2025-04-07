@@ -3,6 +3,7 @@ package ru.sorokin.springcourse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Scope;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 public class SpringConfig {
 
     @Bean
+    @Scope("prototype")
     public ClassicalMusic classicalMusic() {
         return new ClassicalMusic();
     }
@@ -27,7 +29,7 @@ public class SpringConfig {
     }
 
     @Bean
-    public List<Object> musicList() {
+    public List<Music> musicList() {
        return Arrays.asList(classicalMusic(),rockMusic(),jazzMusic());
     }
 

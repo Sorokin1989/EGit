@@ -15,7 +15,7 @@ public class MusicPlayer {
 
     private List<Music> musicList;
 
-    public MusicPlayer(List<Object> musicList) {
+    public MusicPlayer(List<Music> musicList) {
         this.musicList = musicList;
     }
 
@@ -31,6 +31,6 @@ public class MusicPlayer {
     public String playMusic() {
         Random random = new Random();
         return "Playing: " + musicList.get(random.nextInt(musicList.size())).getSong()
-                + "with volume " + this.volume;
+                +  "  with volume " + this.volume;
     }
 }
